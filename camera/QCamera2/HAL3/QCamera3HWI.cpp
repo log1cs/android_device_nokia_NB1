@@ -4021,6 +4021,7 @@ void QCamera3HardwareInterface::handleMetadataWithLock(
                     i->capture_intent, internalPproc, i->fwkCacMode,
                     firstMetadataInBatch);
             result.result = restoreHdrScene(i->scene_mode, result.result);
+            saveExifParams(metadata);
 
             if (i->blob_request) {
                 {
