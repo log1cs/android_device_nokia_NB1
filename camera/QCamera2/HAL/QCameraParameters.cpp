@@ -4482,6 +4482,60 @@ int32_t QCameraParameters::setTsMakeup(const QCameraParameters& params)
     return NO_ERROR;
 }
 
+/*===========================================================================
+ * FUNCTION   : setXmMakeup
+ *
+ * DESCRIPTION: set setXmMakeup from user setting
+ *
+ * PARAMETERS :
+ *   @params  : user setting parameters
+ *
+ * RETURN     : int32_t type of status
+ *              NO_ERROR  -- success
+ *              none-zero failure code
+ *==========================================================================*/
+int32_t QCameraParameters::setXmMakeup(const QCameraParameters& params)
+{
+    const char *str = params.get(KEY_XM_MAKEUP);
+    const char *prev_str = get(KEY_XM_MAKEUP);
+
+    LOGH("str =%s & prev_str =%s", str, prev_str);
+
+    if (str != NULL) {
+        if (prev_str == NULL) {
+            m_bNeedRestart = true;
+            set(KEY_XM_MAKEUP, str);
+        } else if (strcmp(str, prev_str) != 0) {
+            const char* prev_enabled = strrchr(prev_str, ':');
+            const char* curr_enabled = strrchr(str, ':');
+            if (prev_enabled && curr_enabled) {
+                prev_enabled++;
+                curr_enabled++;
+                m_bNeedRestart = (atoi(prev_enabled) > 0 != atoi(curr_enabled) > 0) ?
+                        true : m_bNeedRestart;
+            }
+            set(KEY_XM_MAKEUP, str);
+        }
+
+        str = params.get(KEY_XM_MAKEUP_WHITEN);
+        prev_str = get(KEY_XM_MAKEUP_WHITEN);
+        if (str != NULL) {
+            if (prev_str == NULL || strcmp(str, prev_str) != 0) {
+                set(KEY_XM_MAKEUP_WHITEN, str);
+            }
+        }
+
+        str = params.get(KEY_XM_MAKEUP_CLEAN);
+        prev_str = get(KEY_XM_MAKEUP_CLEAN);
+        if (str != NULL) {
+            if (prev_str == NULL || strcmp(str, prev_str) != 0) {
+                set(KEY_XM_MAKEUP_CLEAN, str);
+            }
+        }
+    }
+
+    return NO_ERROR;
+}
 #endif
 
 /*===========================================================================
