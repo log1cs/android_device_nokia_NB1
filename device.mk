@@ -612,5 +612,9 @@ PRODUCT_PACKAGES += \
 #PRODUCT_BOOT_JARS += \
     WfdCommon
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Inherit vendor
 $(call inherit-product, vendor/nokia/NB1/NB1-vendor.mk)
