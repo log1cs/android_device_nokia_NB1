@@ -84,6 +84,9 @@ extern "C" {
         "hidden", "hyp", "keymaster", "mdtp", "mdtpsecap", "nvdef", \
         "pmic", "rpm", "splash", "systeminfo", "tz", "xbl"
 #define AB_PTN_LIST PTN_SWAP_LIST, "boot", "system", "vendor", "modem"
+#define PTN_XBL_CFG                     "xbl_config"
+#define PTN_MULTIIMGOEM                 "multiimgoem"
+#define PTN_MULTIIMGQTI                 "multiimgqti"
 #define BOOT_DEV_DIR    "/dev/block/bootdevice/by-name"
 
 /******************************************************************************
