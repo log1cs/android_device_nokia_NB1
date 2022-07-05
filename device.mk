@@ -616,5 +616,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
+# Recorder
+PRODUCT_PACKAGES += \
+    RecorderPrebuilt
+
 # Inherit vendor
 $(call inherit-product, vendor/nokia/NB1/NB1-vendor.mk)
