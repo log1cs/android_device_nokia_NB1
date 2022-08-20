@@ -847,7 +847,7 @@ QCamera3ProcessingChannel::QCamera3ProcessingChannel(uint32_t cam_handle,
             mCamera3Stream(stream)
 {
     char prop[PROPERTY_VALUE_MAX];
-    property_get("persist.vendor.debug.sf.showfps", prop, "0");
+    property_get("persist.camera.sf.showfps", prop, "0");
     mDebugFPS = (uint8_t) atoi(prop);
 
     int32_t rc = m_postprocessor.init(&mMemory);
