@@ -129,7 +129,12 @@
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
         <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
         <item>"/system/bin/surfaceflinger"</item>
+
     </string-array>
+
+    <!-- Whether or not wcg (wide color gamut) should be enabled on this device,
+          we only enabled it while the device has ability of mixed color spaces composition -->
+    <bool name="config_enableWcgMode">true</bool>
 
     <!-- Should the pinner service pin the Camera application? -->
      <bool name="config_pinnerCameraApp">false</bool>
