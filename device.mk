@@ -26,7 +26,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audio.r_submix.default \
-    audio.usb.default \
+    audio.usbv2.default \
     libaudio-resampler \
     libaudioroute \
     libqcompostprocbundle \
