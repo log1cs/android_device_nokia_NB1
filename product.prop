@@ -1,2 +1,6 @@
 # IORap
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+
+# Radio
+persist.vendor.qti.telephony.vt_cam_interface=2
+
