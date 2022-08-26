@@ -17,9 +17,6 @@ $(call inherit-product, vendor/arrow/config/common.mk)
 # Inherit from NB1 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# This product supports Face Unlock.
-TARGET_FACE_UNLOCK_SUPPORTED := true
-
 # Device identifier
 PRODUCT_NAME := arrow_NB1
 PRODUCT_DEVICE := NB1
