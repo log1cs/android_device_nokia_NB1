@@ -154,6 +154,7 @@ ro.vendor.extension_library=libqti-perfd-client.so
 sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
 # Radio
+ro.com.android.dataroaming=false
 persist.vendor.radio.enableadvancedscan=false
 persist.vendor.radio.add_power_save=1
 persist.vendor.radio.apm_sim_not_pwdn=1
