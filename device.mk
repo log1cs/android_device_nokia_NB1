@@ -148,6 +148,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.qti.vendor \
     libgralloc.qti \
     libtinyxml \
+    libtinyxml.vendor \
     libqdMetaData \
     libqdMetaData.system \
     libqdMetaData.vendor
