@@ -44,6 +44,8 @@ debug.sf.hw=1
 ro.vendor.display.cabl=2
 sdm.debug.disable_skip_validate=1
 sdm.perf_hint_window=50
+debug.hwui.renderer=skiagl
+renderthread.skia.reduceopstasksplitting=true
 
 # Display - Blur
 persist.sys.sf.disable_blurs=1
