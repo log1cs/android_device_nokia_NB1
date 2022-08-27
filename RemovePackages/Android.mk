@@ -6,7 +6,6 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
     arcore \
-    Camera2 \
     ConnMO \
     ConnMetrics \
     DCMO \
