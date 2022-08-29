@@ -87,7 +87,7 @@ persist.vendor.camera.tof.direct=1
 persist.vendor.camera.HAL3.enabled=1
 persist.vendor.camera.ois.disable=0
 persist.vendor.sys.exif.model="Nokia 8"
-vendor.voice.path.for.pcm.voip=false
+vendor.voice.path.for.pcm.voip=true
 
 # CNE
 persist.vendor.cne.feature=1
