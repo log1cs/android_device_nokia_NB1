@@ -28,6 +28,7 @@ persist.vendor.audio.hw.binder.size_kbyte=1024
 vendor.audio.volume.headset.gain.depcal=true
 persist.audio.fluence.voicecomm=true
 vendor.audio.spkr_prot.tx.sampling_rate=48000
+vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.afe_proxy.enable=true
 vendor.audio.feature.anc_headset.enable=true
 vendor.audio.feature.battery_listener.enable=false
@@ -72,13 +73,11 @@ vendor.audio.feature.snd_mon.enable=true
 
 # Bluetooth
 persist.vendor.bt.aac_frm_ctl.enabled=true
-persist.vendor.qcom.bluetooth.enable.splita2dp=true
-persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac
-persist.vendor.qcom.bluetooth.scram.enabled=false
-persist.vendor.qcom.bluetooth.soc=cherokee
-vendor.audio.feature.a2dp_offload.enable=true
+persist.vendor.btstack.enable.splita2dp=true
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
+persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 vendor.qcom.bluetooth.soc=cherokee
-ro.vendor.bluetooth.wipower=false
+vendor.bluetooth.soc=cherokee
 
 # Camera
 persist.vendor.camera.gyro.android=0
