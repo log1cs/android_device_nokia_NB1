@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_NB1.mk
+    $(LOCAL_DIR)/xdroid_NB1.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_NB1-user \
-    arrow_NB1-userdebug \
-    arrow_NB1-eng
+    xdroid_NB1-user \
+    xdroid_NB1-userdebug \
+    xdroid_NB1-eng

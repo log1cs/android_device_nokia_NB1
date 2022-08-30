@@ -11,14 +11,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Indicate the first api level the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 27
 
-# Inherit some common ArrowOS stuff
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common xdroidOSS stuff.
+$(call inherit-product, vendor/xdroid/config/common.mk)
 
 # Inherit from NB1 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier
-PRODUCT_NAME := arrow_NB1
+PRODUCT_NAME := xdroid_NB1
 PRODUCT_DEVICE := NB1
 PRODUCT_MANUFACTURER := HMD Global
 PRODUCT_BRAND := Nokia
@@ -29,9 +29,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-hmd-rev2
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_BOOT_ANIMATION_RES := 1080
-
-# GApps
-ARROW_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
