@@ -54,10 +54,8 @@ on init
     chmod 0664 /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
     chmod 0664 /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length
 
-    # Disable UFS powersaving
-    write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 0
-    write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled Y
+    # Enable UFS powersaving
+    write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkgate_enable 1
 
     # QSEE rpmb listener needs symlink for bootdevice
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -66,6 +64,9 @@ on init
     # qseecomd needs /dev/block/bootdevice
     # vold needs keymaster that needs qseecomd
     start vendor.qseecomd
+
+    # Disable UFS powersaving
+    write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkgate_enable 0
 
     # disable thermal hotplug for configuration
     write /sys/module/msm_thermal/core_control/enabled 0
@@ -236,11 +237,6 @@ on property:sys.boot_completed=1
 
     # Set BFQ I/O scheduler
     setprop sys.io.scheduler "bfq"
-
-    # Enable UFS powersaving
-    write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 1
-    write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 1
-    write /sys/module/lpm_levels/parameters/sleep_disabled N
 
     # Setup final cpuset
     write /dev/cpuset/top-app/cpus 0-7
