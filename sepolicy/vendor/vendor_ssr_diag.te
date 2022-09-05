@@ -1,3 +1,5 @@
 allow vendor_ssr_diag sysfs:file { open read };
 allow vendor_ssr_diag sysfs_data:file { open read };
+
+allow vendor_ssr_diag diag_device:chr_file { open };
 allow vendor_ssr_diag diag_device:chr_file {read write};

@@ -1,4 +1,5 @@
 allow priv_app zygote:unix_stream_socket { getopt };
+allow priv_app proc_max_map_count:file { read };
 
 dontaudit priv_app { bt_firmware_file firmware_file }:filesystem getattr;
 dontaudit priv_app mnt_vendor_file:dir search;
