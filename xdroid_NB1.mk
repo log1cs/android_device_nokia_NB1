@@ -9,11 +9,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common PixelExperience stuff
-TARGET_INCLUDE_WIFI_EXT := true
-TARGET_USES_AOSP_RECOVERY := true
-TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common xdroidOSS stuff.
+$(call inherit-product, vendor/xdroid/config/common.mk)
 
 # Inherit from NB1 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -21,13 +18,20 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
-PRODUCT_NAME := aosp_NB1
+PRODUCT_NAME := xdroid_NB1
 PRODUCT_DEVICE := NB1
 PRODUCT_MANUFACTURER := HMD Global
 PRODUCT_BRAND := Nokia
 PRODUCT_MODEL := Nokia 8
 
 PRODUCT_GMS_CLIENTID_BASE := android-hmd-rev2
+
+TARGET_INCLUDE_WIFI_EXT := true
+TARGET_USES_AOSP_RECOVERY := true
+
+# xdroid build flags
+XDROID_BOOT := 1080
+XDROID_MAINTAINER := Log1cs
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=NB1 \
