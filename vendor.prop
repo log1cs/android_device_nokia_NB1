@@ -167,6 +167,8 @@ persist.vendor.radio.rat_on=combine
 persist.vendor.radio.procedure_bytes=SKIP
 ro.telephony.iwlan_operation_mode=legacy
 vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
+persist.vendor.radio.data_ltd_sys_ind=1
+persist.vendor.radio.procedure_bytes=SKIP
 
 # RmNet Data
 persist.data.df.agg.dl_pkt=10
