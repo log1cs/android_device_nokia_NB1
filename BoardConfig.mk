@@ -192,5 +192,8 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+# Apex
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # Inherit the proprietary files
 -include vendor/nokia/NB1/BoardConfigVendor.mk
