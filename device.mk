@@ -123,6 +123,9 @@ PRODUCT_PACKAGES += \
     mm-qcamera-app \
     libhal_dbg
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.CDS=off
+
 # Charger
 PRODUCT_PACKAGES += \
     libsuspend
