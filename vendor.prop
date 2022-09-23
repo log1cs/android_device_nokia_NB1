@@ -104,6 +104,7 @@ vendor.gralloc.enable_fb_ubwc=1
 debug.sf.recomputecrop=0
 debug.sf.layer_caching_active_layer_timeout_ms=1000
 ro.surface_flinger.enable_layer_caching=true
+ro.surface_flinger.uclamp.min=130
 debug.sf.disable_client_composition_cache=1
 
 # Dalvik dex2oat
