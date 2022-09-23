@@ -564,4 +564,7 @@
          Setting this to track the default color temperature value (currently 3850K). -->
     <integer name="config_nightDisplayColorTemperatureMax">3850</integer>
 
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">60</integer>
+
 </resources>
