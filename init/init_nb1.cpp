@@ -41,6 +41,8 @@
 #include "vendor_init.h"
 #include "property_service.h"
 
+#include <fs_mgr_dm_linear.h>
+
 using android::base::GetProperty;
 
 char const *heapstartsize;
@@ -104,4 +106,12 @@ void vendor_load_properties()
     property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
     property_override("dalvik.vm.heapminfree", heapminfree);
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
+
+#ifdef __ANDROID_RECOVERY__
+    std::string buildtype = GetProperty("ro.build.type", "userdebug");
+    if (buildtype != "user") {
+        property_override("ro.debuggable", "1");
+        property_override("ro.adb.secure.recovery", "0");
+    }
+#endif
 }
