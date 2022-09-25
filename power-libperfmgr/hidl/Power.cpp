@@ -24,6 +24,7 @@
 #include <android-base/properties.h>
 #include <android-base/strings.h>
 #include <android-base/stringprintf.h>
+#include <linux/input.h>
 
 #include <utils/Log.h>
 #include <utils/Trace.h>
@@ -31,6 +32,40 @@
 #include "disp-power/DisplayLowPower.h"
 #include "Power.h"
 #include "power-helper.h"
+
+namespace {
+int open_ts_input() {
+    int fd = -1;
+    DIR* dir = opendir("/dev/input");
+
+    if (dir != NULL) {
+        struct dirent* ent;
+
+        while ((ent = readdir(dir)) != NULL) {
+            if (ent->d_type == DT_CHR) {
+                char absolute_path[PATH_MAX] = {0};
+                char name[80] = {0};
+
+                strcpy(absolute_path, "/dev/input/");
+                strcat(absolute_path, ent->d_name);
+
+                fd = open(absolute_path, O_RDWR);
+                if (ioctl(fd, EVIOCGNAME(sizeof(name) - 1), &name) > 0) {
+                    if (strcmp(name, "fts_ts") == 0)
+                        break;
+                }
+
+                close(fd);
+                fd = -1;
+            }
+        }
+
+        closedir(dir);
+    }
+
+    return fd;
+}
+}  // anonymous namespace
 
 /* RPM runs at 19.2Mhz. Divide by 19200 for msec */
 #define RPM_CLK 19200
@@ -57,6 +92,9 @@ constexpr char kPowerHalAudioProp[] = "vendor.powerhal.audio";
 constexpr char kPowerHalInitProp[] = "vendor.powerhal.init";
 constexpr char kPowerHalRenderingProp[] = "vendor.powerhal.rendering";
 constexpr char kPowerHalConfigPath[] = "/vendor/etc/powerhint.json";
+
+constexpr int kWakeupModeOff = 4;
+constexpr int kWakeupModeOn = 5;
 
 Power::Power() :
         mHintManager(nullptr),
@@ -128,6 +166,23 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
     if (!mReady) {
         return Void();
     }
+
+Return<void> Power::setFeature(Feature feature, bool activate) {
+    switch (feature) {
+        case Feature::POWER_FEATURE_DOUBLE_TAP_TO_WAKE: {
+            int fd = open_ts_input();
+            struct input_event ev;
+            ev.type = EV_SYN;
+            ev.code = SYN_CONFIG;
+            ev.value = activate ? kWakeupModeOn : kWakeupModeOff;
+            write(fd, &ev, sizeof(ev));
+            close(fd);
+            } break;
+        default:
+            break;
+    }
+    return Void();
+}
 
     switch(hint) {
         case PowerHint_1_0::INTERACTION:
