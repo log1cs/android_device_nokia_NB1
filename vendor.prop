@@ -86,7 +86,6 @@ ro.vendor.bluetooth.wipower=false
 
 # Camera
 persist.vendor.camera.gyro.android=0
-persist.vendor.camera.gyro.disable=0
 persist.vendor.camera.tof.direct=1
 persist.vendor.camera.HAL3.enabled=1
 persist.vendor.camera.ois.disable=0
