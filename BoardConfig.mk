@@ -106,6 +106,10 @@ TARGET_KERNEL_CONFIG := nb1_defconfig
 TARGET_KERNEL_SOURCE := kernel/nokia/msm8998
 TARGET_KERNEL_VERSION := 4.4
 
+# Kernel additional flags
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+
 # Media
 USE_DEVICE_SPECIFIC_MEDIA := true
 USE_DEVICE_SPECIFIC_MEDIA := true
