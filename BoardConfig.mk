@@ -190,5 +190,8 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+# Power
+TARGET_POWERHAL_BOOST_EXT := $(DEVICE_PATH)/configs/power/boost-ext.cpp
+
 # Inherit the proprietary files
 -include vendor/nokia/NB1/BoardConfigVendor.mk
