@@ -200,5 +200,8 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # Apex
 OVERRIDE_TARGET_FLATTEN_APEX := true
 
+# Power
+TARGET_POWERHAL_BOOST_EXT := $(DEVICE_PATH)/configs/power/boost-ext.cpp
+
 # Inherit the proprietary files
 -include vendor/nokia/NB1/BoardConfigVendor.mk
