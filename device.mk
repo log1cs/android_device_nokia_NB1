@@ -395,7 +395,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/configs/permissions/com.evenwell.datacollect.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.evenwell.datacollect.xml \
+    $(LOCAL_PATH)/configs/permissions/com.evenwell.datacollect.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.evenwell.datacollect.xml \
     $(LOCAL_PATH)/configs/permissions/com.fihtdc.datacollect.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.fihtdc.datacollect.xml \
     $(LOCAL_PATH)/configs/permissions/com.fihtdc.hardware.sensor.hall.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.fihtdc.hardware.sensor.hall.xml \
     $(LOCAL_PATH)/configs/permissions/com.fihtdc.inlifeui.settings.style.android.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.fihtdc.inlifeui.settings.style.android.xml
@@ -607,6 +607,11 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
     android.system.net.netd@1.0.vendor \
     netutils-wrapper-1.0
+
+# Codec2 modules
+PRODUCT_PACKAGES += \
+    com.android.media.swcodec \
+    libsfplugin_ccodec
 
 # WiFi Display
 PRODUCT_PACKAGES += \
