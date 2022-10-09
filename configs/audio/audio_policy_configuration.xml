@@ -371,7 +371,7 @@
         </module>
 
         <!-- A2DP Input Audio HAL -->
-        <xi:include href="/vendor/etc/a2dp_in_audio_policy_configuration_7_0.xml"/>
+        <xi:include href="/vendor/etc/bluetooth_audio_policy_configuration_7_0.xml"/>
 
         <!-- Usb Audio HAL -->
         <module name="usb" halVersion="2.0">
