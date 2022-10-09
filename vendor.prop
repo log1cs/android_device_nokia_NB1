@@ -96,6 +96,7 @@ vendor.voice.path.for.pcm.voip=true
 persist.vendor.cne.feature=1
 
 # Display
+debug.sf.enable_gl_backpressure=1
 debug.enable.sglscale=1
 debug.egl.hw=1
 debug.sf.disable_hwc=0
