@@ -192,6 +192,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Power
 TARGET_POWERHAL_BOOST_EXT := $(DEVICE_PATH)/configs/power/boost-ext.cpp
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/configs/power/mode-ext.cpp
 
 # Inherit the proprietary files
 -include vendor/nokia/NB1/BoardConfigVendor.mk
