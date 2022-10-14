@@ -9,7 +9,7 @@ tunnel.decode=false
 
 # Bluetooth
 bt.max.hfpclient.connections=1
-persist.bluetooth.a2dp_offload.disabled=false
+persist.bluetooth.a2dp_offload.disabled=true
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.vendor.bt.a2dp.aac_whitelist=false
 ro.bluetooth.a2dp_offload.supported=true
