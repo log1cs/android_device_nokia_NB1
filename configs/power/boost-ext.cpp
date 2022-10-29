@@ -42,7 +42,7 @@ extern "C" {
 #include "utils.h"
 
 const int kMinInteractiveDuration = 100;  /* ms */
-const int kMaxInteractiveDuration = 5000; /* ms */
+const int kMaxInteractiveDuration = 3000; /* ms */
 
 static int process_interaction_hint(void* data) {
     static struct timespec s_previous_boost_timespec;
