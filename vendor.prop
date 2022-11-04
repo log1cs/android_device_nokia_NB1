@@ -3,9 +3,9 @@ ro.apex.updatable=false
 
 # Audio
 vendor.audio_hal.period_size=192
-ro.vendor.audio.sdk.fluencetype=none
+ro.vendor.audio.sdk.fluencetype=fluence
 persist.vendor.audio.fluence.voicecall=true
-persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio.fluence.voicerec=true
 persist.vendor.audio.fluence.speaker=true
 vendor.audio.tunnel.encode=false
 persist.vendor.audio.ras.enabled=false
