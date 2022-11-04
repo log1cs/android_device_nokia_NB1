@@ -1,6 +1,6 @@
-# Device Tree for Nokia 8
+# Device configurations for Nokia 8 (NB1)
 
-The Nokia 8 model is a flagship Nokia-branded smartphone running the Android operating system. Announced on 16 August 2017 in London, England by HMD Global, the phone began sales in Europe in September 2017. Nokia 8 is the first high-end Nokia-branded device since the Nokia Lumia 930 in 2014.
+The Nokia 8 (codenamed "NB1") is a flagship Nokia-branded smartphone running the Android operating system. Announced on 16 August 2017 in London, England by HMD Global, the phone began sales in Europe in September 2017. Nokia 8 is the first high-end Nokia-branded device since the Nokia Lumia 930 in 2014.
 
 ## Device specifications
 | Basic                   | Spec Sheet                                                                                                                     |
@@ -9,7 +9,7 @@ The Nokia 8 model is a flagship Nokia-branded smartphone running the Android ope
 | Chipset                 | Qualcomm MSM8998 Snapdragon 835 (10 nm)                                                                                                 |
 | GPU                     | Adreno 540                                                                                                                     |
 | Memory                  | 4/6 GB RAM                                                                                                                     |
-| Shipped Android Version | Android 7.1.1 (Nougat)                                                                                                                            |
+| Shipped Android Version | Android 7.1.1 (Nougat), upgradeable to Android 9 (Pie)                                                                                                                            |
 | Storage                 | 64/128 GB                                                                                                                          |
 | Battery                 | Non-removable Li-Ion 3090 mAh battery                                                                                           |
 | Display                 | 1440 x 2560 pixels, 16:9 ratio (~554 ppi density)                                                                              |
@@ -19,4 +19,4 @@ The Nokia 8 model is a flagship Nokia-branded smartphone running the Android ope
 
 ![Nokia 8](https://images.ctfassets.net/d6skzop43my5/1ynkMl4k7iAFvSN1Goa5Q2/13ab747cdfda90c6ddc026bbdcbdedd2/Nokia_8_Range.png)
 
-**Copyright 2021 - The LineageOS Project**
+**Copyright 2022 - The LineageOS Project**
