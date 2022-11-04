@@ -41,6 +41,7 @@ debug.sf.disable_hwc_overlays=1
 debug.renderengine.backend=skiaglthreaded
 debug.sf.hw=1
 debug.hwui.renderer=skiagl
+debug.sf.auto_latch_unsignaled=true
 renderthread.skia.reduceopstasksplitting=true
 ro.vendor.display.cabl=2
 sdm.debug.disable_skip_validate=1
