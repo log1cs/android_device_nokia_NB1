@@ -125,4 +125,5 @@ ro.config.sdha_apps_bg_min=8
 # Disable vsync for cpu rendered apps
 debug.cpurend.vsync=false
 
-
+# Do not block binder thread on incoming calls
+ro.telephony.block_binder_thread_on_incoming_calls=false
