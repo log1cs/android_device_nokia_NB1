@@ -3,8 +3,6 @@
     <item name="none">0</item>
     <item name="screen.on.display0">61</item>
     <item name="screen.full.display0">366.03</item>
-    <item name="bluetooth.active">13.65</item>
-    <item name="bluetooth.on">0.47</item>
     <item name="wifi.on">0.28</item>
     <item name="wifi.active">171.9</item>
     <item name="wifi.scan">43.43</item>
