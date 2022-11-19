@@ -107,6 +107,9 @@ TARGET_KERNEL_CONFIG := nb1_defconfig
 TARGET_KERNEL_SOURCE := kernel/nokia/msm8998
 TARGET_KERNEL_VERSION := 4.4
 
+# LZ4 ramdisk
+BOARD_RAMDISK_USE_LZ4 := false
+
 # Kernel additional flags
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
