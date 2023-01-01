@@ -17,6 +17,6 @@ The Nokia 8 (codenamed "NB1") is a flagship Nokia-branded smartphone running the
 | Camera (Front)          | 13 MP, f/2.0, (wide), 1/3.1", 1.12µm, PDAF                                                                                                    |
 ## Device picture
 
-![Nokia 8](https://images.ctfassets.net/d6skzop43my5/1ynkMl4k7iAFvSN1Goa5Q2/13ab747cdfda90c6ddc026bbdcbdedd2/Nokia_8_Range.png)
+![Nokia 8](https://cdn.arstechnica.net/wp-content/uploads/sites/3/2017/08/small-Nokia-8-Family-1.jpg)
 
 **Copyright 2022 - The LineageOS Project**
