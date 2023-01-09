@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_NB1.mk
+    $(LOCAL_DIR)/lineage_NB1.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_NB1-user \
-    aosp_NB1-userdebug \
-    aosp_NB1-eng
+    lineage_NB1-user \
+    lineage_NB1-userdebug \
+    lineage_NB1-eng
